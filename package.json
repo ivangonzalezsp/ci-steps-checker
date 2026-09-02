@@ -1,0 +1,31 @@
+{
+  "name": "ci-steps-checker",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.34.5",
+  "description": "Report failing tests from an Azure DevOps pipeline build.",
+  "type": "module",
+  "bin": {
+    "pipeline-errors": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "tsx src/cli.ts",
+    "build": "tsc",
+    "prepare": "pnpm run build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.2.0"
+  }
+}
