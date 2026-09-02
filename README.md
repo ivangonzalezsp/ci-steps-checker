@@ -12,12 +12,10 @@ A small TypeScript CLI that writes published failing test cases for an Azure Dev
 ```sh
 pnpm install
 pnpm add --global .
-export AZURE_DEVOPS_ORGANIZATION="your-organization"
-export AZURE_DEVOPS_PROJECT="your-project"
-export AZURE_PERSONAL_ACCESS_TOKEN="your-pat"
+cp .env.example .env
 ```
 
-Keep the PAT in the environment. Do not add it to `.env` files committed to source control.
+Set your Azure DevOps organization, project, and PAT in `.env`. The local `.env` file is ignored by Git; never commit your PAT. Existing shell environment variables take precedence over values in the file.
 
 ## Usage
 
