@@ -110,7 +110,10 @@ Errors write only JSON to stderr. Invalid input or configuration exits with code
 ## Development
 
 ```sh
+pnpm clean
 pnpm test
 pnpm typecheck
 pnpm build
 ```
+
+`pnpm clean` removes generated `ci-error-*.json`, `ci-allure-*.json`, and `ci-allure-*.zip` files from the current directory.
